@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class AccountTeste {
 
+	private static Scanner input;
+
 	public static void main(String[] args) {
 		
 		Account account1 = new Account(50.00);
@@ -12,7 +14,7 @@ public class AccountTeste {
 		System.out.printf("conta 1 saldo: %f\n",account1.getBalance());
 		System.out.printf("conta 2 saldo: %f\n",account2.getBalance());
 		
-		Scanner input = new Scanner(System.in);
+		input = new Scanner(System.in);
 		double depositAmount; //variavel que guarda o que o usuario digitar.
 		
 		System.out.println("Entre com o depósito da conta 1: ");
