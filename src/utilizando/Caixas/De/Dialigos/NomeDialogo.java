@@ -12,7 +12,6 @@ public class NomeDialogo {
 		
 		String message = String.format("Bem vindo , %s , ao programa! você tem %d anos!", name , idade );
 		
-		
 		JOptionPane.showMessageDialog(null, message);
 		
 	}
