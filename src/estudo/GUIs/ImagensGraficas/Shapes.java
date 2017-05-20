@@ -24,6 +24,8 @@ public class Shapes extends JPanel{
 			case 1: g.drawRect(10+i*10, 10+i*10, 50+1*10, 50+1*10); break;
 			case 2: g.drawOval(10+i*10, 10+i*10, 50+1*10, 50+1*10); break;
 			
+			//(,,LARGURA DA FIGURA,ALTURA DA FIGURA)
+			
 			}
 			
 		}
