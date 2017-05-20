@@ -4,6 +4,8 @@ import javax.swing.JPanel;
 
 public class DrawnPanel extends JPanel{
 
+	private static final long serialVersionUID = 1L;
+
 	public void paintComponents(Graphics g){
 		
 		super.paintComponents( g );
