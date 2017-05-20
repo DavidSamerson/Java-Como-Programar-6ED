@@ -6,7 +6,7 @@ import javax.swing.JPanel;
 public class Shapes extends JPanel{
 
 	private static final long serialVersionUID = 1L;
-	private int choice;
+	private int choice; //opção escolhida
 	
 	public Shapes (int userChoice){
 		choice = userChoice;
