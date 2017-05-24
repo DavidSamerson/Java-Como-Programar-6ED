@@ -11,7 +11,7 @@ public class MethodOverload {
 
 	private double square(double doubleValue) {
 		// TODO Auto-generated method stub
-		System.out.printf("\n convertendo inteiro %d",doubleValue);
+		System.out.printf("\n convertendo double %f",doubleValue);
 		return doubleValue * doubleValue;
 	}
 
