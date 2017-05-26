@@ -14,7 +14,7 @@ public class RollDie {
 			++Frequencia[1+gerarNumeros.nextInt(6)];
 		}
 		
-		System.out.printf("%s%10d\n","FACE","FREQUENCY");
+		System.out.printf("%s%10s\n","FACE","FREQUENCY");
 		
 		for ( int face = 1; face < Frequencia.length; face++){
 			System.out.printf("%4d%10d\n",face,Frequencia[face]);
