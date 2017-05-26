@@ -1,13 +1,11 @@
 package arrays;
 
-import javax.swing.plaf.synth.SynthSeparatorUI;
-
 public class BarChart {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int array[] = { 0, 0, 0, 0, 0, 0, 1, 2, 4, 1 };
+		int array[] = { 0, 0, 0, 0, 0, 0, 0, 1, 2, 4, 1 };
 
 		System.out.println("Grade Distribuition: ");
 
