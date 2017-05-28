@@ -1,5 +1,7 @@
 package arrays;
 
+import javax.swing.plaf.synth.SynthSeparatorUI;
+
 public class PassArray {
 
 	public static void main(String[] args) {
@@ -14,6 +16,11 @@ public class PassArray {
 			System.out.printf("    %d", value);
 		
 		modifyArray( array );
+		System.out.println("\n\n the values of the modified array are: ");
+		
+		for( int value: array)
+			System.out.printf("    %d", value);
+		
 		System.out.printf("\n\nEffects of passing array element value: \n"
 				+ "Array [3] before modifyElement: %d\n", array[3]);
 		
@@ -26,13 +33,18 @@ public class PassArray {
 		// TODO Auto-generated method stub
 		
 		element *= 2;
-		System.out.println("Value of element in modifyElement: %d\n", element);
+		System.out.printf("Value of element in modifyElement: %d\n", element);
 		
 	}
 
 	private static void modifyArray(int[] array) {
 		// TODO Auto-generated method stub
 		
+		for(int counter = 0; counter < array.length; counter++){
+			
+			array[counter] *= 2;
+			
+		}
 	}
 
 }
