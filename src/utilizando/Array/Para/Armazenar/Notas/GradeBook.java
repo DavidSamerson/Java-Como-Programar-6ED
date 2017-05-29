@@ -25,7 +25,7 @@ public class GradeBook {
 	public void processGrades() {
 		outputGrades();
 
-		System.out.printf("\nClass average is %2.f \n", getAverage());
+		System.out.printf("\nClass average is %.2f \n", getAverage());
 
 		System.out.printf("\nLowest grade is %d\nHighest grade is %d\n\n", getMinimum(), getMaximum());
 
