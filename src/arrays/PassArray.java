@@ -1,7 +1,5 @@
 package arrays;
 
-import javax.swing.plaf.synth.SynthSeparatorUI;
-
 public class PassArray {
 
 	public static void main(String[] args) {
