@@ -26,4 +26,49 @@ public class GradeBook {
 	{
 		System.out.printf("%s Bem vindo ao programa!\n\n",getCourseName());
 	}
+	
+	public void processGrades()
+	{
+		outputGrades();
+		
+		System.out.printf("\n%s %d\n%s %d\n\n","Valor minimo: ",getMinimum(),"Valor Maximo: ",getMaximum());
+		
+		outputBarChart();
+	}
+	
+	public int getMinimum()
+	{
+		int lowGrade = grades[0][0];
+		
+		for(int studentGrades[] : grades)
+		{
+			for(int grade:studentGrades)
+			{
+				if(grade < lowGrade)
+					lowGrade = grade;
+			}
+		}
+		return lowGrade;
+	}
+	
+	public int getMaximum()
+	{
+		return 0;
+	}
+	
+	public double getAverage()
+	{
+		return 0.0;
+	}
+	
+	public void outputBarChart()
+	{
+		
+	}
+	
+	public void outputGrades()
+	{
+		
+	}
+	
 }
