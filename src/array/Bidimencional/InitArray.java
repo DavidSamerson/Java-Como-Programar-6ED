@@ -16,8 +16,15 @@ public class InitArray {
 
 	}
 
-	private static void outputArray(int[][] array1) {
+	private static void outputArray(int array[][]) {
 		// TODO Auto-generated method stub
+		
+		for(int row = 0; row < array.length; row++)
+		{
+			for(int column = 0; column < array[row].length; column++){
+				System.out.printf("%d ", array[row][column]);
+			}
+		}
 		
 	}
 
