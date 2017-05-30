@@ -21,4 +21,9 @@ public class GradeBook {
 	{
 		return courseName;
 	}
+	
+	public void displayMessage()
+	{
+		System.out.printf("%s Bem vindo ao programa!\n\n",getCourseName());
+	}
 }
