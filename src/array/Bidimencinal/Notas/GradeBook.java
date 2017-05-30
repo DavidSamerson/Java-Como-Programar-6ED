@@ -11,5 +11,9 @@ public class GradeBook {
 		courseName=name;
 		grades=gradesArray;
 	}
-
+	
+	public void setCourseName(String name)
+	{
+		courseName = name;
+	}
 }
