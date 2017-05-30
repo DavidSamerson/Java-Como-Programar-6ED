@@ -12,6 +12,7 @@ public class InitArray {
 		outputArray(array1);
 		
 		System.out.println("\nValues in array2 by row are");
+		outputArray(array2);
 
 	}
 
