@@ -89,8 +89,30 @@ public class GradeBook {
 		}
 	}
 
-	public void outputGrades() {
-
+	public void outputGrades() 
+	{
+		System.out.println("The Grades Are: \n");
+		System.out.println("            ");
+		
+		for(int test = 0; test < grades[0].length; test++)
+		{
+			System.out.printf("Teste %d",test+1);
+		}
+		System.out.println("Average");
+		
+		for(int students = 0; students < grades.length; students++)
+		{
+			System.out.printf("Student %2d", students + 1);
+			
+			for(int test : grades[students])
+			{
+				System.out.printf("%8d",test);
+			}
+			
+			double average = getAverage (grades [students]);
+			System.out.printf("%9.2f\n",average);
+			
+		}
 	}
 
 }
