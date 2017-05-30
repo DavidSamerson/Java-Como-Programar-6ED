@@ -8,7 +8,8 @@ public class GradeBook {
 	
 	public GradeBook(String name, int gradesArray[][])
 	{
-		
+		courseName=name;
+		grades=gradesArray;
 	}
 
 }
