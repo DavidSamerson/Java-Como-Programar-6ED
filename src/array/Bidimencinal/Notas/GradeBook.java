@@ -67,9 +67,14 @@ public class GradeBook {
 		return highGrade;
 	}
 	
-	public double getAverage()
+	public double getAverage(int setOfGrades[])
 	{
-		return 0.0;
+		int total = 0;
+		
+		for ( int grade : setOfGrades )
+			total += grade;
+		
+		return (double) total/setOfGrades.length;
 	}
 	
 	public void outputBarChart()
