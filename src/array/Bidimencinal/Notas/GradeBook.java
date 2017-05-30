@@ -53,7 +53,18 @@ public class GradeBook {
 	
 	public int getMaximum()
 	{
-		return 0;
+		int highGrade = grades[0][0];
+				
+				for(int studentGrades[] : grades)
+				{
+					for(int grade:studentGrades)
+					{
+						if(grade > highGrade)
+							highGrade = grade;
+					}
+				}
+				
+		return highGrade;
 	}
 	
 	public double getAverage()
