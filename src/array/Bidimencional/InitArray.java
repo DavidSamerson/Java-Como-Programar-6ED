@@ -16,4 +16,9 @@ public class InitArray {
 
 	}
 
+	private static void outputArray(int[][] array1) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
