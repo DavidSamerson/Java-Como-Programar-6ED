@@ -16,7 +16,10 @@ public class GradeBookTeste {
 							   {76,72,84},
 							   {87,93,73}};
 		
+		GradeBook mygradebook = new GradeBook("David Samerson", gradesArray);
 		
+		mygradebook.displayMessage();
+		mygradebook.processGrades();
 
 	}
 
