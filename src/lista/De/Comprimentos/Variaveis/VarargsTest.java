@@ -14,6 +14,15 @@ public class VarargsTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		double d1 = 10.0 , d2 = 20.0 , d3 = 30.0 , d4 = 40.0;
+		
+		System.out.printf("D1 = %.1f\n"
+				+ "D2 = %.1f\n"
+				+ "D3 = %.1f\n"
+				+ "D4 = %.1f\n\n",d1,d2,d3,d4);
+		
+		System.out.printf("AVERAGE de 1 e 2 é: %.1f",average(d1,d2));
 
 	}
 
