@@ -29,7 +29,10 @@ public class DrawRainbom extends JPanel{
 		
 		for(int count = colors.length;count > 0; count--)
 		{
+			g.setColor(colors[count-1]);
 			
+			g.fillArc(centerX - count * radius, centerY - count * radius, 
+					count*radius*2,count*radius*2 , 0, 180);
 		}
 		
 		
