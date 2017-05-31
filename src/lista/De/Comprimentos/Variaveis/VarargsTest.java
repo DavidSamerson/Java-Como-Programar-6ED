@@ -23,6 +23,8 @@ public class VarargsTest {
 				+ "D4 = %.1f\n\n",d1,d2,d3,d4);
 		
 		System.out.printf("AVERAGE de 1 e 2 é: %.1f",average(d1,d2));
+		System.out.printf("AVERAGE de 1 , 2 e 3 é: %.1f",average(d1,d2,d3));
+		System.out.printf("AVERAGE de 1 , 2 , 3 e 4 é: %.1f",average(d1,d2,d3,d4));
 
 	}
 
