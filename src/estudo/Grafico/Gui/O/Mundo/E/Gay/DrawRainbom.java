@@ -1,6 +1,8 @@
 package estudo.Grafico.Gui.O.Mundo.E.Gay;
 
 import java.awt.Color;
+import java.awt.Graphics;
+
 import javax.swing.JPanel;
 
 public class DrawRainbom extends JPanel{
@@ -13,6 +15,23 @@ public class DrawRainbom extends JPanel{
 	
 	public DrawRainbom()
 	{
+		setBackground(Color.WHITE);
+	}
+	
+	public void paintComponent(Graphics g)
+	{
+		super.paintComponent(g);
+		
+		int radius = 20;
+		
+		int centerX = getWidth()/2;
+		int centerY = getHeight()-10;
+		
+		for(int count = colors.length;count > 0; count--)
+		{
+			
+		}
+		
 		
 	}
 }
