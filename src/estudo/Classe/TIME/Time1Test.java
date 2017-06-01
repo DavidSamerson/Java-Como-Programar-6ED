@@ -19,6 +19,13 @@ public class Time1Test {
 		System.out.print("The initial standard after time is: ");
 		System.out.println(time.toString());
 		System.out.println();
+		
+		time.setTime(99, 99, 99);
+		System.out.print("The universal initial after time is: ");
+		System.out.println(time.toUniversalString());
+		System.out.print("The initial standard after time is: ");
+		System.out.println(time.toString());
+		System.out.println();
 
 	}
 
