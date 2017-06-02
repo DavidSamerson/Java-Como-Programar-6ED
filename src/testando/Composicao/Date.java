@@ -28,7 +28,7 @@ public class Date {
 	}
 
 	private int checkDay(int theDay) 
-	3{
+	{
 		// TODO Auto-generated method stub
 		return 0;
 	}
