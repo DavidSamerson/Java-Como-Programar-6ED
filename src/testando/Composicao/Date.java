@@ -23,7 +23,8 @@ public class Date {
 			return testMonth;
 
 		else {
-			return testMonth;
+			System.out.println("Invalid Method .. ");
+			return 1;
 		}
 	}
 
