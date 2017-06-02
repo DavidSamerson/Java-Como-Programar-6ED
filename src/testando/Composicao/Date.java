@@ -4,11 +4,11 @@ public class Date {
 
 	private int month;
 	private int day;
-	private int yeah;
+	private int year;
 
 	public Date(int theMonth, int theDay, int theYear) {
 		month = checkMonth(theMonth);
-		yeah = theYear;
+		year = theYear;
 		day = checkDay(theDay);
 
 		System.out.printf("Date Object constructor for date %s\n", this);
@@ -36,7 +36,7 @@ public class Date {
 			return testDay;
 		}
 		
-		if (month == 2 &&  testDay == 29 && ( yeah % 400 == 0 || (yeah % 4 == 0 && yeah % 100 != 0)))
+		if (month == 2 &&  testDay == 29 && ( year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)))
 		{
 			return testDay;
 		}
@@ -46,7 +46,7 @@ public class Date {
 	
 	public String toString()
 	{
-		return null;
+		return String.format("%d/%d/%d", day, month, year);
 	}
 
 }
