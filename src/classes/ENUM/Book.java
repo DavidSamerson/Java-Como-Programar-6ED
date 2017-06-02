@@ -11,6 +11,20 @@ public enum Book {
 	
 	private final String title;
 	private final String yeah;
+
+	Book(String bookTitle, String yeah)
+	{
+		title = bookTitle;
+		this.yeah = yeah;
+	}
 	
+	public String getTitle()
+	{
+		return title;
+	}
 	
+	public String getCopyrightYeah()
+	{
+		return yeah;
+	}
 }
