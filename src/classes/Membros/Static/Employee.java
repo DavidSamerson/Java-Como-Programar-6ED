@@ -20,4 +20,17 @@ public class Employee {
 		count --;
 		System.out.printf("Enployee Construtor: %s %s , Count: %d\n", firstName, lastName, count);
 	}
+	
+	public String getFirstName(){
+		return firstName;
+	}
+	
+	public String getLastName(){
+		return lastName;
+	}
+	
+	//metodo Estático
+	public static int getCount(){
+		return count;
+	}
 }
