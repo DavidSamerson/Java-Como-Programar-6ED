@@ -15,4 +15,9 @@ public class Employee {
 		System.out.printf("Enployee Construtor: %s %s , Count: %d\n", firstName, lastName, count);
 	}
 
+	protected void finalize(){
+		
+		count --;
+		System.out.printf("Enployee Construtor: %s %s , Count: %d\n", firstName, lastName, count);
+	}
 }
