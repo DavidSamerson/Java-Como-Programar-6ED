@@ -9,6 +9,12 @@ public class Increment {
 		INCREMENT = incrementValue;
 	}
 	
+	public void addIncrementToTotal(){
+		total += INCREMENT;
+	}
 	
+	public String toString(){
+		return String.format("Total = %d", total);
+	}
 
 }
