@@ -12,7 +12,7 @@ public class IncrementTest {
 		for (int i = 1; i <= 3; i++) {
 			
 			value.addIncrementToTotal();
-			System.out.printf("after Incrementing: %s\n\n", value);
+			System.out.printf("after Incrementing: %d - %s\n\n",i,value);
 
 
 		}
