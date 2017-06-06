@@ -8,8 +8,14 @@ public class CommissionEmployee3 {
 	private Double grossSales;
 	private double commissionRate;
 
-	public CommissionEmployee3() {
-		// TODO Auto-generated constructor stub
+	public CommissionEmployee3(String first, String last, String ssn, double sales, double rate) {
+		
+		firstName = first;
+		lastName = last;
+		socialSecurityNumber = ssn;
+		grossSales = sales;
+		commissionRate = rate;
+		
 	}
 
 	public String getFirstName() {
