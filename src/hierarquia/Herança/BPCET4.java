@@ -11,10 +11,10 @@ public class BPCET4 {
 		System.out.println("Informações sobre os métodos:");
 		
 		System.out.printf("\nNome: %s %s\n",employee.getFirstName(), employee.getLastName());
-		System.out.printf("Numero Segurança social: %s %s\n",employee.getSocialSecurityNumber());
-		System.out.printf("Gross sales: %s %.2f\n",employee.getGrossSales() );
-		System.out.printf("Commission rate: %s %.2f\n",employee.getCommissionRate() );
-		System.out.printf("Base Salary: %s %.2f\n",employee.getBaseSalary() );
+		System.out.printf("Numero Segurança social: %s\n",employee.getSocialSecurityNumber());
+		System.out.printf("Gross sales: %s\n",employee.getGrossSales() );
+		System.out.printf("Commission rate: %s \n",employee.getCommissionRate() );
+		System.out.printf("Base Salary: %s \n",employee.getBaseSalary() );
 		
 		employee.setBaseSalary(1000);
 		
