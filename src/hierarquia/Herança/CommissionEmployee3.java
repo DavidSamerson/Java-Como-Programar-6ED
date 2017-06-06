@@ -1,7 +1,7 @@
 package hierarquia.Herança;
 
 public class CommissionEmployee3 {
-	
+
 	private String firstName;
 	private String lastName;
 	private String socialSecurityNumber;
@@ -9,13 +9,13 @@ public class CommissionEmployee3 {
 	private double commissionRate;
 
 	public CommissionEmployee3(String first, String last, String ssn, double sales, double rate) {
-		
+
 		firstName = first;
 		lastName = last;
 		socialSecurityNumber = ssn;
-		grossSales = sales;
-		commissionRate = rate;
-		
+		setGrossSales(sales);
+		setCommissionRate(rate);
+
 	}
 
 	public String getFirstName() {
@@ -42,12 +42,12 @@ public class CommissionEmployee3 {
 		this.socialSecurityNumber = socialSecurityNumber;
 	}
 
-	public Double getGrossSales() {
+	public double getGrossSales() {
 		return grossSales;
 	}
 
 	public void setGrossSales(Double grossSales) {
-		this.grossSales = grossSales;
+		this.grossSales = (grossSales < 0.0) ? 0.0 : grossSales;
 	}
 
 	public double getCommissionRate() {
@@ -55,9 +55,21 @@ public class CommissionEmployee3 {
 	}
 
 	public void setCommissionRate(double commissionRate) {
-		this.commissionRate = commissionRate;
+		this.commissionRate = (commissionRate > 0.0 && commissionRate < 1.0) ? commissionRate : 0.0;
 	}
 	
+	public double earnings(){
+		
+		return getCommissionRate()*getGrossSales();
+	}
 	
+	public String toString(){
+		
+		return String.format("%s: %s %s\n%s: %s\n%s: %.2f\n%s: %.2f",
+				"First e Last Name",getFirstName(),getLastName(),
+				"Social Security Number",getSocialSecurityNumber(),
+				"Gross Sales",getGrossSales(),
+				"Commission Rate",getCommissionRate());
+	}
 
 }
