@@ -11,6 +11,46 @@ public class CommissionEmployee3 {
 	public CommissionEmployee3() {
 		// TODO Auto-generated constructor stub
 	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getSocialSecurityNumber() {
+		return socialSecurityNumber;
+	}
+
+	public void setSocialSecurityNumber(String socialSecurityNumber) {
+		this.socialSecurityNumber = socialSecurityNumber;
+	}
+
+	public Double getGrossSales() {
+		return grossSales;
+	}
+
+	public void setGrossSales(Double grossSales) {
+		this.grossSales = grossSales;
+	}
+
+	public double getCommissionRate() {
+		return commissionRate;
+	}
+
+	public void setCommissionRate(double commissionRate) {
+		this.commissionRate = commissionRate;
+	}
 	
 	
 
