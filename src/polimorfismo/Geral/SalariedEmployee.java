@@ -15,7 +15,16 @@ public class SalariedEmployee extends Employee {
 	}
 
 	public void setSalary(double salary) {
-		this.salary = salary;
+		this.salary = salary < 0.0 ? 0.0 : salary;
+	}
+	
+	public double earnings(){
+		return getSalary();
+	}
+	
+	public String toString(){
+		
+		return String.format("Salario : %s\n%s: $%,.2f", super.toString(),"W Salary", getSalary());
 	}
 	
 	
