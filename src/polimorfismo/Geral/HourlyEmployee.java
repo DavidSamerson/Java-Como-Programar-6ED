@@ -33,5 +33,11 @@ public class HourlyEmployee extends Employee {
 				? getWare()*getHours()
 						: 40*getWare() + (getHours() - 40) * getWare() * 1.5;
 	}
+	
+	public String toString(){
+		
+		return String.format("Horas: %s\n%s: $%,.2f; %s: %,.2f", super.toString(),
+				"Horas Trabalhadas",getHours());
+	}
 
 }
