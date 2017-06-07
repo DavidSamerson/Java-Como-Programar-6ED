@@ -1,5 +1,6 @@
 package estudo.GUI.Exibindo.Imagem.Texto;
 
+import java.awt.BorderLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -22,7 +23,12 @@ public class LabelDemo {
 		JFrame application = new JFrame();
 		application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
+		application.add(northLabel,BorderLayout.NORTH);
+		application.add(centerLabel,BorderLayout.CENTER);
+		application.add(southLabel,BorderLayout.SOUTH);
 		
+		application.setSize(300, 300);
+		application.setVisible(true);
 
 	}
 
