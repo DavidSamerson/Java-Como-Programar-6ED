@@ -25,7 +25,13 @@ public class HourlyEmployee extends Employee {
 	}
 
 	public void setHours(double hours) {
-		this.hours = hours;
+		this.hours = ((hours >= 0.0) && (hours <= 168.0)) ? hours : 0.0;
+	}
+	
+	public double earnings() {
+		return (getHours() <= 40.0)
+				? getWare()*getHours()
+						: 40*getWare() + (getHours() - 40) * getWare() * 1.5;
 	}
 
 }
