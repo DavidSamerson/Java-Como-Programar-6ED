@@ -37,9 +37,7 @@ public abstract class Employee {
 		this.ssn = ssn;
 	}
 	
-	public String toString(){
-		return String.format("%s %s\nSSN: %s", getFirstName(), getLastName(), getSsn());
-	}
+	public abstract String toString();
 	
 	
 
