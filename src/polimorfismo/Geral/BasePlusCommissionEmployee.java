@@ -1,7 +1,5 @@
 package polimorfismo.Geral;
 
-import java.nio.channels.GatheringByteChannel;
-
 public class BasePlusCommissionEmployee extends CommissionEmployee {
 
 	private double baseSalary;
