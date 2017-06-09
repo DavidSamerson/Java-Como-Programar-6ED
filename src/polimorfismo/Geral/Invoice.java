@@ -60,8 +60,11 @@ public class Invoice implements Payable {
 	public void setPrincePerItem(double princePerItem) {
 		this.princePerItem = princePerItem < 0.0 ? 0.0 : princePerItem;
 	}
-
-
+	
+	public String toString(){
+		return String.format("%s: \n%s: %s (%s) \n%s: %d\n%s: $%,.2f","invoice", "Part Number", getPartNumber()
+				, getPartDescription(), "Quantity", getQuantity(), "price per item", getPrincePerItem());
+	}
 
 	@Override
 	public double getPaymentAmount() {
