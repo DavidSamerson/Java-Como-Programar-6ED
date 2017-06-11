@@ -32,11 +32,12 @@ public class DividePorZeroETrataExcessão {
 				
 			} catch (InputMismatchException e) {
 				// TODO: handle exception
-				
+				System.out.printf("\nExcessão: %s\n",e);
+				sc.nextLine();
 				
 			}catch (ArithmeticException e) {
 				// TODO: handle exception
-				
+				System.out.printf("\nExcessão: %s divisão por 0\n",e);
 			}
 			
 		} while (continueLoop);
