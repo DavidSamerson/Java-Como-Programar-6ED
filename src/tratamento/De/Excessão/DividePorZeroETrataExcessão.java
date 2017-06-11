@@ -26,6 +26,9 @@ public class DividePorZeroETrataExcessão {
 				int denominador = sc.nextInt();
 				
 				int resultado = Quotient(numerador, denominador);
+				System.out.printf("\nResultado%d / %d = %d\n",numerador, denominador, resultado);
+				
+				continueLoop = false;
 				
 			} catch (InputMismatchException e) {
 				// TODO: handle exception
