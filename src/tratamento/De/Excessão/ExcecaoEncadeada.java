@@ -1,6 +1,6 @@
 package tratamento.De.Excessão;
 
-public class ExcessaoEncadeada {
+public class ExcecaoEncadeada {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
