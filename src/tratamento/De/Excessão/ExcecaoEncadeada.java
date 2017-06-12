@@ -20,7 +20,7 @@ public class ExcecaoEncadeada {
 		try {
 			method2();
 		} catch (Exception e)  {
-			throw new Exception("Erro no método 1");
+			throw new Exception("Erro no método 1",e);
 		}
 		
 	}
@@ -30,7 +30,7 @@ public class ExcecaoEncadeada {
 		try {
 			method3();
 		} catch (Exception e) {
-			throw new Exception("Erro no método 2");
+			throw new Exception("Erro no método 2",e);
 		}
 	}
 
