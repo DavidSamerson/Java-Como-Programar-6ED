@@ -22,7 +22,11 @@ public class UsingExceptions {
 		} catch (Exception e) {
 			// TODO: handle exception
 			throw e;
+		}finally {
+			System.err.println("Erro");
 		}
+		
+		
 		
 	}
 
