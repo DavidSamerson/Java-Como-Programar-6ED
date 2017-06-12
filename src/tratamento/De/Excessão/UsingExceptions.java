@@ -29,5 +29,19 @@ public class UsingExceptions {
 		
 		
 	}
+	
+	public static void doesNoThrowException(){
+		
+		try {
+			System.out.println("Método doesNoThrowException");
+		}
+		catch(Exception e){
+			System.err.println(e);
+		} 
+		finally {
+			System.err.println("Bloco final executando");
+		}
+		System.out.println("END");
+	}
 
 }
