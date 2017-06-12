@@ -18,7 +18,7 @@ public class UsingExceptions {
 		// TODO Auto-generated method stub
 		
 		try {
-			System.out.println("Metodo Exception");
+			System.out.println("Metodo Exception ");
 		} catch (Exception e) {
 			// TODO: handle exception
 			throw e;
