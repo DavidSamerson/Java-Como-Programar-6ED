@@ -14,8 +14,15 @@ public class UsingExceptions {
 
 	}
 
-	private static void throwException() {
+	private static void throwException() throws Exception {
 		// TODO Auto-generated method stub
+		
+		try {
+			System.out.println("Metodo Exception");
+		} catch (Exception e) {
+			// TODO: handle exception
+			throw e;
+		}
 		
 	}
 
