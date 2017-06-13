@@ -15,7 +15,8 @@ public class FileDemonstration {
 					(name.isFile() ? "Is a file" : "is not a file"),
 					(name.isDirectory() ? "Is a directory" : "Is not a directory"),
 					(name.isAbsolute() ? "Is a absolute path" : "Is not a absolute path"),
-					"Last Modified: ",name.lastModified() );
+					"Last Modified: ",name.lastModified(), "Length: ",name.getAbsolutePath(),
+					"Parent: ", name.getParent());
 			
 		}
 		
