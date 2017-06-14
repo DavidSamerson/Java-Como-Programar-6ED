@@ -1,0 +1,6 @@
+90000 david samerson 99,99
+
+900000 david samerson 9999,99
+
+300 david samerson 5744,56
+

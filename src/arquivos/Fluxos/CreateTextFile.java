@@ -41,7 +41,7 @@ public class CreateTextFile {
 				
 				if (record.getAccount() > 0) {
 					
-					output.format("%d %s %s %.2f\n", 
+					output.format("%d %s %s %.2f\n\n", 
 							record.getAccount(), record.getFirstName(),
 							record.getLastName(), record.getBalance());
 				}
