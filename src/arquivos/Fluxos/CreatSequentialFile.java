@@ -13,7 +13,7 @@ public class CreatSequentialFile {
 	public void openFile(){
 		
 		try {
-			output = new ObjectOutputStream(new FileOutputStream("clients.txt"));
+			output = new ObjectOutputStream(new FileOutputStream("clients.ser"));
 		} catch (IOException e) {
 			System.out.println("Erro ao abrir o arquivo");
 		}
