@@ -6,6 +6,8 @@ import java.nio.channels.ShutdownChannelGroupException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
+import javax.security.auth.callback.TextInputCallback;
+
 public class CreditInquiry {
 
 	private MenuOption accountType;
@@ -47,6 +49,71 @@ public class CreditInquiry {
 		} catch (FileNotFoundException e) {
 			System.err.println("Arquivo não encontrado");
 			System.exit(1);
+		} finally {
+			if (input != null)
+				input.close();
+		}
+		
+	} 
+	
+	private boolean shouldDisplay(double balance){
+		
+		if((accountType == MenuOption.CREDIT_BALANCE) && (balance < 0)){
+			return true;
+		} 
+		else if  ((accountType == MenuOption.DEBIT_BALANCE) && (balance > 0)){
+			return true;
+		}
+		else if ((accountType  == MenuOption.ZERO_BALANCE) && (balance == 0)){
+			return true;
+		}
+		
+		return false;
+	
+	}
+	
+	private MenuOption getRequest(){
+		
+		Scanner textIn = new Scanner (System.in);
+		int request = 1;
+		
+		System.out.println("digite 1-Zero Balanço 2-credito balanço 3-debito balanço 4-sair");
+		
+		try {
+			do {
+				
+				System.out.println("\n? ");
+				request = textIn.nextInt();
+				
+			} while ((request < 1)&&(request > 4));
+		} catch (NoSuchElementException e) {
+			
+			System.err.println("Entrada inválida");
+			System.exit(1);
+			
+		}
+		return choices[request-1];
+	}
+	
+	public void processRequest(){
+		
+		accountType = getRequest();
+		
+		while (accountType != MenuOption.END) {
+			
+			switch (accountType) {
+			case ZERO_BALANCE:
+				System.out.println("\nZERO Balanço:\n");
+				break;
+			case CREDIT_BALANCE:
+				System.out.println("\nCREDITO Balanço:\n");
+				break;
+			case DEBIT_BALANCE:
+				System.out.println("\nDEBITO Balanço:\n");
+				break;
+
+			}
+			
 		}
 		
 	}
