@@ -12,7 +12,9 @@ public class ReadTextFile {
 	public void openFile() {
 
 		try {
+			
 			input = new Scanner(new File("clients.txt"));
+			
 		} catch (FileNotFoundException e) {
 			// TODO: handle exception
 			System.out.println("Erro ao Abrir o Arquivo");
