@@ -53,4 +53,13 @@ public class ReadTextFile {
 
 	}
 
+	public void closeFile() {
+		// TODO Auto-generated method stub
+		if (input != null) {
+			
+			input.close();
+			
+		}
+	}
+
 }
