@@ -114,6 +114,9 @@ public class CreditInquiry {
 
 			}
 			
+			readRecords();
+			accountType = getRequest();
+			
 		}
 		
 	}
