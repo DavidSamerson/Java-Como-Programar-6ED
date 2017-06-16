@@ -32,8 +32,9 @@ public class CreateRandomFile {
 			try {
 				if (file != null)
 					file.close();
-			} catch (Exception e2) {
-				
+			} catch (IOException e2) {
+				System.err.println("Erro ao Fechar o arquivo");
+				System.exit(1);
 			}
 		}
 		
