@@ -10,7 +10,7 @@ public class ReadRandomFile {
 	
 	public void openFile(){
 		try {
-			input = new RandomAccessFile("clients.bat","wr");
+			input = new RandomAccessFile("clients.bat","rw");
 		} catch (IOException e) {
 			System.out.println("Arquivo não foi encontrado");
 		}
