@@ -42,6 +42,26 @@ public class FileDemonstrator extends JFrame {
 		}
 		return fileName;
 	}
-	public void analysePath(){}
+	public void analysePath()
+	{
+		File name = getFile();
+		
+		if(name.exists())
+		{
+		outputArea.setText(String.format("%s", "EXISTE"));
+			if (name.isDirectory()) {
+				String directory[] = name.list();
+				outputArea.append("\nDiretório: \n");
+				for (String string : directory) {
+					outputArea.append(string + "\n");
+				}
+			}
+		}
+		
+		else {
+			JOptionPane.showMessageDialog(this, name + "Não EXISTE", "ERRO", JOptionPane.ERROR_MESSAGE );
+		}
+		
+	}
 
 }
