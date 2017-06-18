@@ -9,13 +9,13 @@ public class Fatorial {
 			return 1;
 		}
 		else {
-			return number * factorial(number);
+			return number * factorial(number-1);
 		}
 	}
 	
 	public void displayFactorials()
 	{
-		for (int i = 0; i <= 10; i++) {
+		for (int i = 0; i <= 100; i++) {
 			
 			System.out.printf("%d = %d\n",i,factorial(i));
 			
