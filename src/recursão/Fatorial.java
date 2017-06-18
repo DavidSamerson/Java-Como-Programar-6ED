@@ -13,6 +13,13 @@ public class Fatorial {
 		}
 	}
 	
-	
+	public void displayFactorials()
+	{
+		for (int i = 0; i <= 10; i++) {
+			
+			System.out.printf("%d = %d\n",i,factorial(i));
+			
+		}
+	}
 
 }
