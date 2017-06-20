@@ -23,7 +23,7 @@ public class PesquisaBinaria {
 		int location = -1;
 
 		do {
-			System.out.printf(remaningElements(low, middle));
+			System.out.printf(remaningElements(low, righ));
 			for (int i = 0; i < middle; i++) {
 				System.out.print(" ");
 			}
@@ -43,9 +43,26 @@ public class PesquisaBinaria {
 		return location;
 	}
 
-	private String remaningElements(int low, int middle) {
-		// TODO Auto-generated method stub
-		return null;
+	private String remaningElements(int low, int righ) 
+	{
+		StringBuffer temporary = new StringBuffer();
+		
+		for (int i = 0; i < low; i++) {
+			temporary.append("  ");
+		}
+		
+		for (int i = low; i < righ ; i++) {
+			temporary.append(data[i] + " ");
+		}
+		
+		temporary.append("\n");
+		
+		return temporary.toString();
+	}
+	
+	public String toString()
+	{
+		return remaningElements(0,data.length-1);
 	}
 
 }
