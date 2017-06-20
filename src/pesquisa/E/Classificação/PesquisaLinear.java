@@ -27,6 +27,16 @@ public class PesquisaLinear {
 		return -1;
 	}
 	
-	
+	public String toString()
+	{
+		StringBuffer temporary = new StringBuffer();
+		
+		for (int i : data) {
+			temporary.append( i + "");
+		}
+		
+		temporary.append("\n");
+		return temporary.toString();
+	}
 
 }
