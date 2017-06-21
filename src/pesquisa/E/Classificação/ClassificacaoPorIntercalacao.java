@@ -21,20 +21,40 @@ public class ClassificacaoPorIntercalacao {
 
 	private void sortArray(int low, int high) {
 		if ((high - low) >= 1) {
-			int middle = (low + high)/2;
+			int middle = (low + high) / 2;
 			int middle2 = middle + 1;
-			
-			System.out.println("Sprit:  "+subarray(low, high));
-			System.out.println("        "+subarray(low, middle));
-			System.out.println("        "+subarray(middle2, high));
+
+			System.out.println("Sprit:  " + subarray(low, high));
+			System.out.println("        " + subarray(low, middle));
+			System.out.println("        " + subarray(middle2, high));
 			sortArray(low, middle);
 			sortArray(middle2, high);
-			merge (low, middle, middle2, high);
+			merge(low, middle, middle2, high);
 		}
 	}
 
-	private void merge(int low, int middle, int middle2, int high) {
+	private void merge(int left, int middle, int middle2, int hight) {
+		int leftIndex = left;
+		int rightIndex = middle2;
+		int combinedIndex = left;
+		int[] combined = new int[data.length];
+
+		System.out.println("Merge:  " + subarray(left, middle));
+		System.out.println("        " + subarray(middle2, hight));
+
+		while (leftIndex <= middle && rightIndex <= hight) {
+			if(data[leftIndex] <= data[rightIndex])
+				combined[combinedIndex++] = data[leftIndex++];
+			else
+				combined[combinedIndex++] = data[leftIndex++];
+		}
 		
+		if(leftIndex == middle2)
+			while(rightIndex <= hight)
+				combined[combinedIndex++] = data[rightIndex++];
+		else
+			while(leftIndex <= middle)
+				combined[combinedIndex++] = data[leftIndex++];
 	}
 
 	private String subarray(int low, int high) {
