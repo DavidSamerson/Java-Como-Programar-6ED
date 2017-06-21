@@ -79,5 +79,7 @@ public class ClassificacaoPorIntercalacao {
 	public String toString(){
 		return subarray(0,data.length - 1);
 	}
+	
+	
 
 }
