@@ -35,19 +35,19 @@ public class ClassificacaoPorSelecao {
 		System.out.print(String.format("After Pass %2d: ", pass));
 		
 		for (int i = 0; i < index; i++) {
-			System.out.print(data[i] + " ");
+			System.out.print(data[i] + "  ");
 		}
 		System.out.print(data[index] + "* ");
 		
 		for (int i = 0; i < data.length; i++) {
-			System.out.print(data[i] + " ");
+			System.out.print(data[i] + "  ");
 		}
-		System.out.println("\n        ");
+		System.out.println("\n            ");
 		
 		for (int i = 0; i < pass; i++) {
 			System.out.print("-- ");
-			System.out.println("\n");
 		}
+		System.out.println("\n");
 	}
 	
 	public String toString(){
