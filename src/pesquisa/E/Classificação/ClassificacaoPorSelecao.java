@@ -43,6 +43,20 @@ public class ClassificacaoPorSelecao {
 			System.out.print(data[i] + " ");
 		}
 		System.out.println("\n        ");
+		
+		for (int i = 0; i < pass; i++) {
+			System.out.print("-- ");
+			System.out.println("\n");
+		}
+	}
+	
+	public String toString(){
+		StringBuffer temporary = new StringBuffer();
+		for (int i : data) {
+			temporary.append(i + " ");
+		}
+		temporary.append("\n");
+		return temporary.toString();
 	}
 
 	private void swap(int first, int second) {
