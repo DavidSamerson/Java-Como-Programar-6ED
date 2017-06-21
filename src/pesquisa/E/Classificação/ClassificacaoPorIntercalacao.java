@@ -43,23 +43,41 @@ public class ClassificacaoPorIntercalacao {
 		System.out.println("        " + subarray(middle2, hight));
 
 		while (leftIndex <= middle && rightIndex <= hight) {
-			if(data[leftIndex] <= data[rightIndex])
+			if (data[leftIndex] <= data[rightIndex])
 				combined[combinedIndex++] = data[leftIndex++];
 			else
 				combined[combinedIndex++] = data[leftIndex++];
 		}
-		
-		if(leftIndex == middle2)
-			while(rightIndex <= hight)
+
+		if (leftIndex == middle2)
+			while (rightIndex <= hight)
 				combined[combinedIndex++] = data[rightIndex++];
 		else
-			while(leftIndex <= middle)
+			while (leftIndex <= middle)
 				combined[combinedIndex++] = data[leftIndex++];
+
+		for (int i = left; i <= hight; i++)
+			data[i] = combined[i];
+		
+		System.out.println("      " + subarray(left, hight));
+		System.out.println();
 	}
 
 	private String subarray(int low, int high) {
-		// TODO Auto-generated method stub
-		return null;
+		StringBuffer temp = new StringBuffer();
+		
+		for (int i = 0; i < low; i++) {
+			temp.append("  ");
+		}
+		
+		for (int i = low; i <= high; i++) {
+			temp.append("   "+data[i]);
+		}
+		return temp.toString();
+	}
+	
+	public String toString(){
+		return subarray(0,data.length - 1);
 	}
 
 }
