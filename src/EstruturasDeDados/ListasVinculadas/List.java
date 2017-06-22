@@ -32,7 +32,7 @@ public class List {
 	private String name;
 
 	public List() {
-		this("list");
+		this("List");
 	}
 
 	public List(String listName) {
@@ -101,7 +101,7 @@ public class List {
 		return firstNode == null;
 	}
 
-	public void Print() {
+	public void print() {
 
 		if (isEmpty()) {
 			System.out.printf("Empty: %s\n", name);
