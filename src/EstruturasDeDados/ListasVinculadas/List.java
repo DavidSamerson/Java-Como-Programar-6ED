@@ -68,6 +68,23 @@ public class List {
 		if (firstNode == lastNode) {
 			firstNode = lastNode = null;
 		} else {
+			firstNode = firstNode.nextNode;
+		}
+		
+		return removedItem;
+	}
+	
+	public Object removeFromBack() throws EmptyListException
+	{
+		
+		if (isEmpty())
+			throw new EmptyListException(name);
+
+		Object removedItem = lastNode.data;
+
+		if (firstNode == lastNode) {
+			firstNode = lastNode = null;
+		} else {
 			ListNode current = firstNode;
 			
 			while (current.nextNode != lastNode) {
@@ -77,25 +94,25 @@ public class List {
 			lastNode = current;
 			current.nextNode = null;
 		}
-		return removedItem;
+		return removedItem;	
 	}
-	
-	public boolean isEmpty(){
+
+	public boolean isEmpty() {
 		return firstNode == null;
 	}
-	
-	public void Print(){
-		
+
+	public void Print() {
+
 		if (isEmpty()) {
-			System.out.printf("Empty: %s\n",name);
+			System.out.printf("Empty: %s\n", name);
 			return;
 		}
-		
-		System.out.printf("The %s is: ",name);
+
+		System.out.printf("The %s is: ", name);
 		ListNode current = firstNode;
-		
+
 		while (current != null) {
-			System.out.printf("%s",current.data);
+			System.out.printf("%s", current.data);
 			current = current.nextNode;
 		}
 		System.out.println("\n");
