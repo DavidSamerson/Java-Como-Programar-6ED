@@ -5,7 +5,7 @@ public class OverloadMethods {
 	public static void printArray(Integer[] inputArray)
 	{
 		for(Integer element : inputArray){
-			System.out.printf("%s",element);
+			System.out.printf("%s ",element);
 		}
 		System.out.println();
 	}
@@ -13,7 +13,7 @@ public class OverloadMethods {
 	public static void printArray(Double[] inputArray)
 	{
 		for(Double element : inputArray){
-			System.out.printf("%s",element);
+			System.out.printf("%s ",element);
 		}
 		System.out.println();
 	}
