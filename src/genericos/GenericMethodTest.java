@@ -11,8 +11,16 @@ public class GenericMethodTest {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Integer[] integerArray = {1,2,3,4,5,6};
+		Double[] doubleArray = {1.1,1.2,1.3,1.4,1.5,1.6,1.7};
+		Character[]characterArray = {'h','e','l','l','o'};
+		
+		System.out.println("Array de Inteiros");
+		printArray(integerArray);
+		System.out.println("Array de Double");
+		printArray(doubleArray);
+		System.out.println("Array de Caracteres");
+		printArray(characterArray);
 	}
 
 }
