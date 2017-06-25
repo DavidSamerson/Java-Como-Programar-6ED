@@ -1,7 +1,5 @@
 package genericos;
 
-import java.util.EmptyStackException;
-
 public class Stack<E> {
 
 	private final int size;
