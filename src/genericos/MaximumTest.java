@@ -14,8 +14,11 @@ public class MaximumTest {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		System.out.printf("Maximo entre %d, %d e %d é: %d\n",3,4,5,maximum(3, 4, 5));
+		System.out.printf("Maximo entre %.1f, %.1f e %.1f é: %.1f\n",1.1,2.2,3.3,maximum(1.1, 2.2, 3.3));
+		System.out.printf("Maximo entre %s, %s e %s é: %s","PEAR","APPLE","ORANGE",maximum("pear","apple","orange"));
+		
 	}
 
 }
