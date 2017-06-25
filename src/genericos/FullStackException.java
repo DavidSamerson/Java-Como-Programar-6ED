@@ -1,9 +1,13 @@
 package genericos;
 
-public class FullStackException extends Exception {
+public class FullStackException extends RuntimeException {
 
-	public FullStackException(String format) {
-		// TODO Auto-generated constructor stub
+	public FullStackException(){
+		this("Stack is full");
 	}
+	public FullStackException(String format) {
+		super(format);
+	}
+	
 
 }
