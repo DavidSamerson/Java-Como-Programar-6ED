@@ -1,5 +1,7 @@
 package genericos;
 
+import java.util.EmptyStackException;
+
 public class Stack<E> {
 
 	private final int size;
@@ -21,9 +23,9 @@ public class Stack<E> {
 		elements[++top] = pushValue;
 	}
 	
-
-	public static void main(String[] args) {
-
+	public E pop(){
+		if (top == -1) 
+			throw new EmptyStackException("Stack is empty, cannot pop");
+		return elements[top--];
 	}
-
 }
