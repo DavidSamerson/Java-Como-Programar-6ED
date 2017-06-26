@@ -80,7 +80,8 @@ public class StackTest {
 
 	public static void main(String[] args) {
 		
-
+		StackTest app = new StackTest();
+		app.testStack();
 	}
 
 }
