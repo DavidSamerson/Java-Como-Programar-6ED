@@ -48,6 +48,19 @@ public class StackTest {
 			e.printStackTrace();
 		}
 	}
+	
+	public void testPushInteger()
+	{
+		try {
+			System.out.println("Puxando elementos da intStack");
+			for (int e : integerElements){
+				System.out.printf("%d",e);
+			}
+		} catch (FullStackException e) {
+			System.err.println();
+			e.printStackTrace();
+		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
