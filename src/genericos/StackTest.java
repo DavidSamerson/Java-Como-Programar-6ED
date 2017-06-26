@@ -61,9 +61,25 @@ public class StackTest {
 			e.printStackTrace();
 		}
 	}
+	
+	public void testPopInteger()
+	{
+		try {
+			System.out.println("\nPopping Elements from intStack");
+			int popValue;
+			
+			while (true) {
+				popValue = integerStack.pop();
+				System.out.printf("%d",popValue);
+			}
+		} catch (EmptyStackException e) {
+			System.err.println();
+			e.printStackTrace();
+		}
+	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 
 	}
 
