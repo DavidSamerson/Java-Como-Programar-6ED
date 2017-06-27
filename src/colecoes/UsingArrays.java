@@ -15,6 +15,35 @@ public class UsingArrays {
 		Arrays.sort(doubleArray);
 		System.arraycopy(intArray, 0, intArrayCopy, 0, intArray.length );
 	}
+	
+	public void printArray(){
+		
+		System.out.println("Double Array: ");
+		for (double d : doubleArray) {
+			System.out.printf("%.1f",d);
+		}
+		
+		System.out.println("\nInt Array: ");
+		for (int i : intArray) {
+			System.out.printf("%d",i);
+		}
+		
+		System.out.println("\nFilled Int Array: ");
+		for (int i : filledIntArray) {
+			System.out.printf("%d",i);
+		}
+		
+		System.out.println("\nInt Array Copy: ");
+		for (int i : intArrayCopy) {
+			System.out.printf("%d",i);
+		}
+		
+		System.out.println("\n");
+	}
+	
+	public int searchForInt(int value){
+		return Arrays.binarySearch(intArray, value);
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
