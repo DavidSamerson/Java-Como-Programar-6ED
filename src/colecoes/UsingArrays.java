@@ -56,7 +56,22 @@ public class UsingArrays {
 
 	public static void main(String[] args) {
 		
-
+		UsingArrays app = new UsingArrays();
+		
+		app.printArray();
+		app.printEquality();
+		
+		int location = app.searchForInt(5);
+		if(location >=0)
+			System.out.printf("Fount 5 at element %d for IntArray\n",location);
+		else
+			System.out.println("5 not found");
+		
+		location = app.searchForInt(8763);
+		if(location >=0)
+			System.out.printf("Fount 8763 at element %d for IntArray\n",location);
+		else
+			System.out.println("8763 not found");
 	}
 
 }
