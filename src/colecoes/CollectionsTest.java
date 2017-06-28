@@ -1,6 +1,8 @@
 package colecoes;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 
 public class CollectionsTest {
@@ -26,11 +28,30 @@ public class CollectionsTest {
 		for(int count = 0; count < list.size(); count++){
 			System.out.printf("%s",list.get(count));
 		}
+		
+		removeColors(list, removeList);
+		
+		System.out.println("ArrayList After Calling removeColors");
+		
+		for(String color : list){
+			removeList.add(color);
+		}
+	}
+
+	private void removeColors(Collection<String> list, Collection<String> removeList) {
+		
+		Iterator<String> iterator = list.iterator();
+		
+		while(iterator.hasNext()){
+			if(list.contains(iterator.next())){
+				iterator.remove();
+			}
+		}
+		
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		new CollectionsTest();
 	}
 
 }
