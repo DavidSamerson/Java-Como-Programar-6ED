@@ -46,9 +46,19 @@ public class VectorTest {
 		System.out.printf("\nSize: %d\nCapacity: %d\n",vector.size(),vector.capacity());
 	}
 
-	private void printVector(Vector<String> vector) {
-		// TODO Auto-generated method stub
+	private void printVector(Vector<String> vectorToOutput) {
 		
+		if(vectorToOutput.isEmpty())
+			System.out.print("Vector is Empty");
+		
+		else{
+			
+			System.out.print("Vector Contains: ");
+			for(String e : vectorToOutput)
+				System.out.printf("%s",e);
+		}
+		
+		System.out.println("\n");
 	}
 
 	public static void main(String[] args) {
