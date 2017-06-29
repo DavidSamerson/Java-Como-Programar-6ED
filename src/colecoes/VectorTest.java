@@ -12,7 +12,7 @@ public class VectorTest {
 		Vector<String> vector = new Vector<String> ();
 		printVector(vector);
 		
-		for (String a : vector) {
+		for (String a : colors) {
 			vector.add(a);
 		}
 		
