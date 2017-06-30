@@ -16,7 +16,7 @@ public class Sort1 {
 		
 		Collections.sort(list);
 		
-		System.out.printf("Sorted Array Elements: \n%s\n");
+		System.out.printf("Sorted Array Elements: \n%s\n",list);
 	}
 
 	public static void main(String[] args) {
