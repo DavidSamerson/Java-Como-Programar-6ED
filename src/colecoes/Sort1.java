@@ -21,7 +21,9 @@ public class Sort1 {
 
 	public static void main(String[] args) {
 		
-
+		Sort1 sort = new Sort1();
+		sort.printElements();
+		
 	}
 
 }
