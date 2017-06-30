@@ -21,7 +21,7 @@ private static final String suits[] = {"Hearts", "Diamonds", "Clubs", "Spades"};
 
 	public static void main(String[] args) {
 		
-		Sort1 sort = new Sort1();
+		Sort2 sort = new Sort2();
 		sort.printElements();
 		
 	}
