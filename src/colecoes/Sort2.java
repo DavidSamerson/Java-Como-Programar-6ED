@@ -16,7 +16,7 @@ private static final String suits[] = {"Hearts", "Diamonds", "Clubs", "Spades"};
 		
 		Collections.sort(list,Collections.reverseOrder());
 		
-		System.out.println("Sorted Array Elements: \n%s\n",list);
+		System.out.printf("Sorted Array Elements: \n%s\n",list);
 	}
 
 	public static void main(String[] args) {
