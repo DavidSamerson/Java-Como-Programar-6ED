@@ -43,8 +43,21 @@ public class StackTest {
 	}
 
 	private void printStack(Stack<Number> stack) {
-		// TODO Auto-generated method stub
 		
+		if(stack.isEmpty()){
+			
+			System.out.println("Stack is Empty\n\n");
+			
+		}else{
+			
+			System.out.println("Stack contains: ");
+			
+			for (Number number : stack) {
+				System.out.printf("%s",number);
+			}
+			
+			System.out.println("(TOP)\n\n");
+		}
 	}
 
 	public static void main(String[] args) {
