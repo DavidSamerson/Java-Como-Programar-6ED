@@ -18,9 +18,11 @@ public class PrintTask implements Runnable{
 	{
 		try {
 			System.out.printf("%s going to sleep for %d milliseconds.\n",threadName, sleepTime);
-		} catch (Exception e) {
-			// TODO: handle exception
+			Thread.sleep(sleepTime);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
+		System.out.printf("%s done Sleeping\n", threadName);
 	}
 
 }
