@@ -43,13 +43,32 @@ public class SynchronizedBuffer implements Buffer {
 
 	@Override
 	public int get() {
-		// TODO Auto-generated method stub
+		
+		int readValue = 0;
+		acessLock.lock();
+		
+		try {
+			while (!occupied) 
+			{
+				System.out.println("Consumer tries to read. ");
+				displayState("Buffer Empty. consumer waits");
+				canRead.await();
+				occupied = false;
+				readValue = buffer;
+				displayState("Consumer reads "+ readValue);
+				canWrite.signal();
+			}
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		} finally{
+			acessLock.unlock();
+		}
 		return 0;
 	}
 	
 
-	private void displayState(String string) {
-		// TODO Auto-generated method stub
+	private void displayState(String operation) {
+		System.out.printf("%-40s%d\t\t%b\n\n",operation, buffer, occupied);
 		
 	}
 
