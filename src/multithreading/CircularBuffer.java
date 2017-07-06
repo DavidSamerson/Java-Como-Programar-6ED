@@ -51,8 +51,31 @@ public class CircularBuffer implements Buffer {
 	@Override
 	public int get() {
 		
+		int readValue = 0;
+		accessLock.lock();
 		
-		return 0;
+		try {
+			
+			while (occupiedBuffers == 0) {
+				System.out.println("All buffers empty. Consumer waits.\n");
+				canRead.await();
+			}
+			
+			readValue = buffer[readIndex];
+			
+			readIndex = (readIndex + 1) % buffer.length;
+			
+			occupiedBuffers  --;
+			displayState("Consumer Reads "+readValue);
+			canWrite.signal();
+			
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		} finally {
+			accessLock.unlock();
+		}
+		
+		return readValue;
 	}
 	
 	private void displayState(String string) {
