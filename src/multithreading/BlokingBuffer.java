@@ -16,14 +16,22 @@ public class BlokingBuffer implements Buffer {
 			buffer.put(value);
 			System.out.println("Producer");
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 	}
 
 	@Override
 	public int get() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		int readValue = 0;
+		
+		try {
+			readValue = buffer.take();
+			System.out.println("Consumer");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return readValue;
 	}
 
 }
