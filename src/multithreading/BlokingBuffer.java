@@ -12,7 +12,12 @@ public class BlokingBuffer implements Buffer {
 
 	@Override
 	public void set(int value) {
-		
+		try {
+			buffer.put(value);
+			System.out.println("Producer");
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 
 	@Override
