@@ -61,7 +61,7 @@ public class SiteSelector extends JApplet{
 		
 		while( title != null){
 			
-			location = getParameter ("Location" + counter);
+			location = getParameter ("location" + counter);
 			
 			try{
 				
