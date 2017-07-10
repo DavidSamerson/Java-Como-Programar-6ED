@@ -2,6 +2,7 @@ package redes;
 
 import java.applet.AppletContext;
 import java.awt.BorderLayout;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -51,7 +52,30 @@ public class SiteSelector extends JApplet{
 
 	private void getSitesFromHTMLParameters() {
 		
+		String title;
+		String location;
+		URL url;
+		int counter = 0;
 		
+		title = getParameter("title" + counter);
+		
+		while( title != null){
+			
+			location = getParameter ("Location" + counter);
+			
+			try{
+				
+				url = new URL( location );
+				sites.put(title, url);
+				siteNames.add(title);
+
+			}catch(MalformedURLException e){
+				e.printStackTrace();
+			}
+			
+			counter++;
+			title = getParameter("title" + counter);
+		}
 		
 	}	
 }
