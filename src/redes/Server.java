@@ -115,4 +115,20 @@ public class Server extends JFrame {
 			}
 		} while (!message.equals("CLIENT>>> TERMINATE"));
 	}
+	
+	private void closeConnection(){
+		
+		displayMessage("\nTerminated Connection");
+		setTextFieldEditable(false);
+		
+		try {
+			
+			output.close();
+			input.close();
+			connection.close();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }
