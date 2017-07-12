@@ -15,6 +15,7 @@ import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 
 public class Server extends JFrame {
 	
@@ -66,7 +67,7 @@ public class Server extends JFrame {
 					processConnection();
 					
 				} catch (EOFException e) {
-					displayMEssage("\nServer Terminated connection");
+					displayMessage("\nServer Terminated connection");
 				} finally{
 					closeConnection();
 					counter++;
@@ -130,5 +131,44 @@ public class Server extends JFrame {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	private void sendData(String message){
+		
+		try {
+			
+			output.writeObject("SERVER>>>"+ message);
+			output.flush();
+			displayMessage("\nSERVER>>>" + message);
+			
+		} catch (IOException e) {
+			displayArea.append("\nError Object");
+		}
+	}
+	
+	private void displayMessage(final String messageToDisplay){
+		
+		SwingUtilities.invokeLater(new Runnable() {
+			
+			@Override
+			public void run() {
+				
+				displayArea.append(messageToDisplay);
+				
+			}
+		});
+	}
+	
+	private void setTextFieldEditable(final boolean editable){
+		
+		SwingUtilities.invokeLater(new Runnable() {
+			
+			@Override
+			public void run() {
+				
+				enterField.setEditable(editable);
+				
+			}
+		});
 	}
 }
