@@ -1,7 +1,6 @@
 package redes;
 
 import java.awt.BorderLayout;
-import java.awt.GraphicsConfiguration;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,6 +9,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
+import java.net.Socket;
 
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
@@ -23,6 +23,7 @@ public class Server extends JFrame {
 	private ObjectOutputStream output;
 	private ObjectInputStream input;
 	private ServerSocket server;
+	private Socket connection;
 	private int counter = 1;
 
 	public Server() throws HeadlessException {
@@ -77,5 +78,22 @@ public class Server extends JFrame {
 		
 	}
 
+	public void waitForConnection() throws IOException{
+		
+		displayMessage("Waiting for Connections \n");
+		connection = server.accept();
+		displayMessage("Connection "+counter+" recevied from: "+ connection.getInetAddress().getHostName());
+		
+	}
 	
+	public void getStreams() throws IOException {
+		
+		output = new ObjectOutputStream(connection.getOutputStream());
+		output.flush();
+		
+		input = new ObjectInputStream(connection.getInputStream());
+		
+		displayMessage("\nGod I/O Strreams");
+		
+	}
 }
