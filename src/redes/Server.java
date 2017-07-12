@@ -78,7 +78,7 @@ public class Server extends JFrame {
 		
 	}
 
-	public void waitForConnection() throws IOException{
+	private void waitForConnection() throws IOException{
 		
 		displayMessage("Waiting for Connections \n");
 		connection = server.accept();
@@ -86,7 +86,7 @@ public class Server extends JFrame {
 		
 	}
 	
-	public void getStreams() throws IOException {
+	private void getStreams() throws IOException {
 		
 		output = new ObjectOutputStream(connection.getOutputStream());
 		output.flush();
@@ -95,5 +95,24 @@ public class Server extends JFrame {
 		
 		displayMessage("\nGod I/O Strreams");
 		
+	}
+	
+	private void processConnection() throws IOException {
+		
+		String message = "Connection Sucessful";
+		sendData(message);
+		
+		setTextFieldEditable(true);
+		
+		do {
+			try {
+				
+				message = (String) input.readObject();
+				displayMessage("\n" + message);
+				
+			} catch (ClassNotFoundException e) {
+				displayMessage("\nUnknown Object type received");
+			}
+		} while (!message.equals("CLIENT>>> TERMINATE"));
 	}
 }
