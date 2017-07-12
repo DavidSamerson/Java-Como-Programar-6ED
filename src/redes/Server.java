@@ -5,6 +5,8 @@ import java.awt.GraphicsConfiguration;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.EOFException;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
@@ -49,19 +51,31 @@ public class Server extends JFrame {
 		setVisible(true);
 	}
 
-	public Server(GraphicsConfiguration arg0) {
-		super(arg0);
-		// TODO Auto-generated constructor stub
+	public void runServer() {
+		
+		try {
+			
+			server = new ServerSocket(12345, 100);
+			
+			while (true) {
+				try {
+					
+					waitForConnection();
+					getStreams();
+					processConnection();
+					
+				} catch (EOFException e) {
+					displayMEssage("\nServer Terminated connection");
+				} finally{
+					closeConnection();
+					counter++;
+				}
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
 	}
 
-	public Server(String arg0) throws HeadlessException {
-		super(arg0);
-		// TODO Auto-generated constructor stub
-	}
-
-	public Server(String arg0, GraphicsConfiguration arg1) {
-		super(arg0, arg1);
-		// TODO Auto-generated constructor stub
-	}
-
+	
 }
