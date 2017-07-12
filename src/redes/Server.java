@@ -1,12 +1,16 @@
 package redes;
 
+import java.awt.BorderLayout;
 import java.awt.GraphicsConfiguration;
 import java.awt.HeadlessException;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 
 import javax.swing.JFrame;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
@@ -23,7 +27,26 @@ public class Server extends JFrame {
 		
 		super("server");
 		
+		enterField = new JTextField();
+		enterField.setEditable(false);
+		enterField.addActionListener( new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				sendData( e.getActionCommand());
+				enterField.setText("");
+				
+			}
+		});
 		
+		add(enterField, BorderLayout.NORTH);
+		
+		displayArea = new JTextArea();
+		add(new JScrollPane(displayArea), BorderLayout.CENTER);
+		
+		setSize(300, 150);
+		setVisible(true);
 	}
 
 	public Server(GraphicsConfiguration arg0) {
