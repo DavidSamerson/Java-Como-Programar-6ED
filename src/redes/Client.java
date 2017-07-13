@@ -90,9 +90,44 @@ public class Client extends JFrame {
 		displayMessage("\nGot I/O Streams \n");
 		
 	}
+	
+	private void processConnection() throws IOException {
+		
+		setTextFieldEditable(true);
+		
+		do {
+			try {
+				
+				message = (String) input .readObject();
+				displayMessage("\n" + message);
+				
+			} catch (ClassNotFoundException e) {
+				displayMessage("\nUnknown object type received");
+			}
+		} while (!message.equals("SERVER>>> TERMINATE"));
+		
+	}
+	
+	private void closeConnection(){
+		
+		displayMessage("\nClosing connection");
+		setTextFieldEditable(false);
+		
+		try {
+			
+			output.close();
+			input.close();
+			client.close();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
 
 	private void displayMessage(String string) {
-		// TODO Auto-generated method stub
+		
+		
 
 	}
 }
