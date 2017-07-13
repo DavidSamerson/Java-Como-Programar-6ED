@@ -63,7 +63,7 @@ public class Client extends JFrame {
 			processConnection();
 			
 		} catch (EOFException e) {
-			displayMessage("\nClient terminated")
+			displayMessage("\nClient terminated");
 		} catch (IOException e){
 			e.printStackTrace();
 		} finally{
