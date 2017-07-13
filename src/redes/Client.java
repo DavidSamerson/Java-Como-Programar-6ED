@@ -54,7 +54,7 @@ public class Client extends JFrame {
 		setVisible(true);
 	}
 
-	private void runClient(){
+	public void runClient(){
 		
 		try {
 			
