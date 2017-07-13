@@ -79,6 +79,17 @@ public class Client extends JFrame {
 		displayMessage("Connected to: "+ client.getInetAddress().getHostName());
 
 	}
+	
+	private void getStreams() throws IOException{
+		
+		output = new ObjectOutputStream( client.getOutputStream() );
+		output.flush();
+		
+		input = new ObjectInputStream( client.getInputStream() );
+		
+		displayMessage("\nGot I/O Streams \n");
+		
+	}
 
 	private void displayMessage(String string) {
 		// TODO Auto-generated method stub
