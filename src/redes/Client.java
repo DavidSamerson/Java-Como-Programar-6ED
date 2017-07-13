@@ -15,6 +15,7 @@ import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 
 public class Client extends JFrame {
 
@@ -138,9 +139,17 @@ public class Client extends JFrame {
 		}
 	}
 
-	private void displayMessage(String string) {
+	private void displayMessage(final String string) {
 		
-		
-
+		SwingUtilities.invokeLater(new Runnable() {
+			
+			@Override
+			public void run() {
+				
+				displayArea.append(string);
+				
+			}
+		});
 	}
+	
 }
