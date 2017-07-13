@@ -152,4 +152,17 @@ public class Client extends JFrame {
 		});
 	}
 	
+	private void setTextFieldEditable(final boolean editable){
+		
+		SwingUtilities.invokeLater(new Runnable() {
+			
+			@Override
+			public void run() {
+				
+				enterField.setEditable(editable);
+				
+			}
+		});
+		
+	}
 }
