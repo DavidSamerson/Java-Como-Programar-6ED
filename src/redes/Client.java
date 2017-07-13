@@ -124,6 +124,19 @@ public class Client extends JFrame {
 		}
 		
 	}
+	
+	private void sendData(String message){
+		
+		try {
+			
+			output.writeObject("CLIENT>>> "+ message);
+			output.flush();
+			displayMessage("\nCLIENT>>> "+ message);
+			
+		} catch (IOException e) {
+			displayArea.append("\nError Writing object");
+		}
+	}
 
 	private void displayMessage(String string) {
 		
