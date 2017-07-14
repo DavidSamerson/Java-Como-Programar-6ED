@@ -55,6 +55,18 @@ public class Server2 extends JFrame {
 		
 	}
 	
+	private void sendPacketToClient(DatagramPacket receivePacket) throws IOException {
+		
+		displayMessage("\n\nEcho data to client");
+		
+		DatagramPacket sendPacket = new DatagramPacket(receivePacket.getData(), receivePacket.getLength(),
+											receivePacket.getAddress(), receivePacket.getPort());
+		
+		socket.send(sendPacket);
+		displayMessage("PacketSend\n");
+		
+	}
+	
 	
 
 }
