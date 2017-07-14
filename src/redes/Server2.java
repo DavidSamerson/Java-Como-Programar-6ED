@@ -9,6 +9,7 @@ import java.net.SocketException;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.SwingUtilities;
 
 public class Server2 extends JFrame {
 	
@@ -67,6 +68,18 @@ public class Server2 extends JFrame {
 		
 	}
 	
-	
+	private void displayMessage(final String messageToDisplay){
+		
+		SwingUtilities.invokeLater(new Runnable() {
+			
+			@Override
+			public void run() {
+				
+				displayArea.append(messageToDisplay);
+				
+			}
+		});
+		
+	}
 
 }
