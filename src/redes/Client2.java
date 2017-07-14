@@ -1,13 +1,16 @@
 package redes;
 
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.net.SocketException;
 
 import javax.swing.JFrame;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
@@ -47,7 +50,27 @@ public class Client2 extends JFrame {
 
 			}
 		});
+		
+		add(enterField, BorderLayout.NORTH);
+		displayArea = new JTextArea();
+		add(new JScrollPane(displayArea), BorderLayout.CENTER);
+		setSize(400, 300);
+		setVisible(true);
+		
+		try {
+			socket = new DatagramSocket();
+		} catch (SocketException e) {
+			e.printStackTrace();
+			System.exit(1);
+		}
 
+	}
+	
+	
+
+	protected void displayMessage(String string) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
