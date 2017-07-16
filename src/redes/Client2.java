@@ -20,7 +20,7 @@ public class Client2 extends JFrame {
 	private JTextArea displayArea;
 	private DatagramSocket socket;
 
-	public Client2()   {
+	public Client2() {
 
 		super("Client");
 
