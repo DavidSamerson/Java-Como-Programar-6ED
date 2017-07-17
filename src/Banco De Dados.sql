@@ -1,0 +1,1 @@
+select * from table where criterios de selecao like padrão (D% ou _i%)
